@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>完了済み</title>
+<style>
+    table {
+        width: 80%;
+        border-collapse: collapse;
+        margin: 20px auto; /* ページ中央に配置 */
+    }
+    th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    h1 {
+        text-align: center;
+    }
+    .back-link {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<h1>完了済み</h1>
+<a href="/todos">戻る</a>
+<table>
+	<thead>
+		<tr>
+			<th>完了</th>
+			<th>未完了にする</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="todo : ${todoList}">
+			<td th:text="${todo.todoText}"></td>
+			<td>
+				<form th:action="@{'/todo/' + ${todo.id} + '/false'}" method="post">
+					<button type="submit">×</button>
+				</form>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

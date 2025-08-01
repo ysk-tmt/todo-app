@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>編集</title>
+</head>
+<body>
+<h1>編集</h1>
+<form th:action="@{/todo/update}" th:object="${todo}" method="post">
+	<input type="hidden" name="id" th:value="${todo.id}">
+	<input type="text" name="todoText" th:value="${todo.todoText}" required>
+	<button type="submit">編集</button>
+</form>
+<a href="/todos">戻る</a>
+</body>
+</html>
