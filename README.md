@@ -34,4 +34,4 @@
 
 ### 1. プロジェクトのクローン（ダウンロード）
 ```bash
-git clone [https://github.com/ysk-tmt/todo-app.git](https://github.com/ysk-tmt/todo-app.git)
+git clone https://github.com/ysk-tmt/todo-app.git
